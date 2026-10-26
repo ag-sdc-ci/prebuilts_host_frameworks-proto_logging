@@ -59,8 +59,9 @@ cc_prebuilt_library_shared {
     export_include_dirs: ["include"],
 }
 
-cc_library_headers {
+cc_prebuilt_library_headers {
     name: "libexpresscatalog-utils-headers",
+    prefer: true,
     export_include_dirs: ["include"],
     host_supported: true,
 }
