@@ -1,0 +1,6 @@
+shadow prebuilt repo: frameworks/proto_logging (host)
+  upstream: https://android.googlesource.com/platform/frameworks/proto_logging
+  branch: universal
+  source-baseline: 17.0.0 (main)
+  deliverables: bin/stats-log-api-gen, bin/expresscatalog-codegen, lib64/libstats_proto_host.so, lib64/libexpressconfig_proto_host.so, lib64/libexpresscatalog.so, include/catalog.h, include/expresscatalog-utils.h
+  date: 2026-10-26
