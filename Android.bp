@@ -21,9 +21,32 @@ package {
 cc_prebuilt_binary {
     name: "stats-log-api-gen",
     srcs: ["bin/stats-log-api-gen"],
+    required: [
+        "stats-log-api-gen-copy-java-srcs",
+        "stats-log-api-gen-copy-cc-hdrs",
+        "stats-log-api-gen-copy-cc-srcs",
+    ],
     prefer: true,
     host_supported: true,
     device_supported: false,
+}
+
+prebuilt_etc_host {
+    name: "stats-log-api-gen-copy-java-srcs",
+    srcs: ["etc/stats-log-api-gen/java/StatsHistogram.java"],
+    sub_dir: "stats-log-api-gen/java",
+}
+
+prebuilt_etc_host {
+    name: "stats-log-api-gen-copy-cc-hdrs",
+    srcs: ["etc/stats-log-api-gen/cc_hdrs/StatsHistogram.h"],
+    sub_dir: "stats-log-api-gen/cc_hdrs",
+}
+
+prebuilt_etc_host {
+    name: "stats-log-api-gen-copy-cc-srcs",
+    srcs: ["etc/stats-log-api-gen/cc_srcs/StatsHistogram.cpp"],
+    sub_dir: "stats-log-api-gen/cc_srcs",
 }
 
 cc_prebuilt_binary {
